@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<a href="{{ url_for('show_users') }}">all users</a>
+<h4>
+  {% for key, value in user.items() %}
+    <li> {{ key }} : {{ value }}</li>
+  {% endfor %}
+</h4>
+</body>
+</html>
