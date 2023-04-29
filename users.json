@@ -23,5 +23,20 @@
         "username": "dasha",
         "email": "dasha@email",
         "id": 5
+    },
+    {
+        "username": "pavel",
+        "email": "fake@email",
+        "id": 7
+    },
+    {
+        "username": "jasmin",
+        "email": "jas@email",
+        "id": 9
+    },
+    {
+        "username": "dusha",
+        "email": "fake@metelkin",
+        "id": 10
     }
 ]

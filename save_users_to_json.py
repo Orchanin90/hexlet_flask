@@ -9,7 +9,7 @@ def read_json_data():
             json_data = json.load(f)
             return json_data
     except FileNotFoundError:
-        return 'File does not exist'
+        pass
 
 
 def write_json_data(data):
@@ -28,6 +28,22 @@ def add_user_to_json_file(username, email):
 def write_json(data):
     with open(json_file, 'w') as f:
         json.dump(data, f, indent=4)
+
+
+def update_user_email(user, email):
+    data = read_json_data()
+    for index, elem in enumerate(data):
+        if elem['username'] == user['username']:
+            data[index]['email'] = email
+    write_json_data(data)
+
+
+def remove_user_from_data(id):
+    data = read_json_data()
+    for index, elem in enumerate(data):
+        if elem['id'] == id:
+            del data[index]
+    write_json_data(data)
 
 
 if __name__ == '__main__':

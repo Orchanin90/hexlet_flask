@@ -7,13 +7,26 @@
 <body>
 <h1>New user</h1>
 <form action="{{ url_for('create_new_user') }}" method="post">
-  <label for="username">Username</label>
-  <input type="text" required name="username" id="username">
+  <div>
+    <label for="username">Username</label>
+    <input type="text" required name="username" id="username" value="{{ username }}">
+    <br>
+    {% if errors.username %}
+    {{ errors.username }}
+    {% endif %}
+  </div>
   <br>
-  <label for="email">Email</label>
-  <input type="email" required id="email" name="email">
-  <br>
-  <input type="submit" value="Register">
+  <div>
+    <label for="email">Email</label>
+    <input type="email" required id="email" name="email" value="{{ email }}">
+    <br>
+    {% if errors.email %}
+    {{ errors.email }}
+    {% endif %}
+    <br>
+    <input type="submit" value="Register">
+  </div>
+
 </form>
 </body>
 </html>
