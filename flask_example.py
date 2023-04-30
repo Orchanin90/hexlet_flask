@@ -20,7 +20,6 @@ def hello_world():
 
 @app.get('/users')
 def show_users():
-    print(session)
     list_of_users = read_json_data()
     word = request.args.get('word', '')
     filtered_users = filter(lambda elem: word in elem['username'],

@@ -6,4 +6,4 @@ meta:
 
 run:
   command: gunicorn --workers=4 --bind 0.0.0.0:80 flask_example:app
-  containerPort: 5000
+  containerPort: 80
