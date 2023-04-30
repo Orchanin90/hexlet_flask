@@ -1,0 +1,9 @@
+meta:
+  environment: python
+  toolchain:
+    name: pip
+    version: 3.10
+
+run:
+  command: gunicorn --workers=4 --bind=127.0.0.1:5000 flask_example:app
+  containerPort: 5000
